@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFRICA BOX - MY TV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <meta name="description" content="Téléchargez MY TV et profitez de vos chaînes préférées en haute qualité. Compatible avec Android TV, smartphones et tablettes.">
+    <meta name="keywords" content="MY TV, application TV, Android TV, chaînes TV, HD, multi-plateformes">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AFRICA BOX - MY TV">
+    <meta property="og:description" content="Profitez de vos chaînes préférées où que vous soyez avec MY TV. Téléchargez maintenant !">
+    <meta property="og:image" content="screenshot1.jpg">
+    <meta property="og:url" content="https://votre-site.com">
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .header {
+            background: linear-gradient(to right, #055709, #fff700);
+            color: #f7f7f7;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header .btn {
+            background: #130499;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .header .btn:hover {
+            background: #0044cc;
+            transform: scale(1.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        /* Carrousel */
+        .carousel-slider {
+            position: relative;
+        }
+
+        .carousel-slider img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #130499;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background: #0044cc;
+        }
+
+        /* Témoignages */
+        .testimonial-item {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .testimonial-item h3 {
+            margin: 0 0 10px;
+            color: #055709;
+        }
+
+        /* Blog */
+        .blog-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        .blog-item h3 {
+            margin: 0 0 10px;
+            color: #055709;
+        }
+
+        /* Footer */
+        .footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-slider img, .carousel-slider {
+                width: 100%;
+            }
+        }
+
+        .blog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.blog-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h3 {
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+.blog-item p {
+    text-align: center;
+    color: #555;
+}
+
+.blog-button {
+    display: inline-block;
+    margin-top: 15px;
+    background: #130499;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.blog-button:hover {
+    background: #0044cc;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>AFRICA BOX - MY TV</h1>
+            <p>Profitez de vos chaînes préférées où que vous soyez.</p>
+            <br>
+            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="btn" id="downloadBtn">Télécharger l'application</a>
+        </div>
+    </header>
+    <!-- Carrousel -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>Captures d'écran</h2>
+            <div class="carousel-slider">
+                <div>
+                    <img src="https://play-lh.googleusercontent.com/-PQRzKbBatdlwh85_ksCdzRzPz500C97fk9Qc8FBbP0EubWTnEPa4YQzNBvsyNPLxss=w526-h296-rw" alt="Capture 1">
+                    <button class="carousel-button" onclick="showMoreInfo('Capture 1')">En savoir plus</button>
+                </div>
+                <div>
+                    <img src="https://play-lh.googleusercontent.com/2lAVyB9hctG-nAqIP9ghn_R1S3q0GmSHgQmPZbwUr9IGgvFrI-inAWcQ_LPF6Mq_8gI=w2560-h1440-rw" alt="Capture 2">
+                    <button class="carousel-button" onclick="showMoreInfo('Capture 2')">En savoir plus</button>
+                </div>
+                <div>
+                    <img src="https://play-lh.googleusercontent.com/PLghLU74fsS9ER6pzJfyVPsuxc9KFbU8GqPdSYCEZNzaoBSP9Qkq0LH-XZph1hJSVYA=w2560-h1440-rw" alt="Capture 3">
+                    <button class="carousel-button" onclick="showMoreInfo('chaînes Africaines')">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Blog -->
+<section class="blog">
+    <div class="container">
+        <h2>Actualités</h2>
+        <div class="blog-item">
+            <img src="https://play-lh.googleusercontent.com/MGQhQAX1Pwj-SLPtuiZn75pEFrG-_6AePWEGYggfxMNIUH0krwb2sUd_yI5vNML2M8AI=w2560-h1440-rw" alt="Image pour le lancement de MY TV" class="blog-image">
+            <h3>Lancement de MY TV</h3>
+            <p>Découvrez notre application et profitez de vos chaînes préférées dès aujourd'hui.</p>
+            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="blog-button">Télécharger l'application</a>
+        </div>
+        <div class="blog-item">
+            <img src="https://play-lh.googleusercontent.com/f2BqgNdG_FA6EcWD0VpK2dUoQUUyG2WLZlrc5omFJnQCAmNaEgzkh4UYyCNFNxTyHFhL=w416-h235-rw" alt="Image pour la mise à jour de MY TV" class="blog-image">
+            <h3>Nouvelle Mise à Jour</h3>
+            <p>Ajout de 10 nouvelles chaînes et meilleure qualité de streaming.</p>
+            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="blog-button">Télécharger l'application</a>
+        </div>
+    </div>
+</section>
+    
+    <!-- Témoignages -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Témoignages</h2>
+            <div class="testimonial-item">
+                <h3>John Doe</h3>
+                <p>"MY TV est la meilleure application pour regarder la TV en HD. Super interface !"</p>
+            </div>
+            <div class="testimonial-item">
+                <h3>Jane Smith</h3>
+                <p>"Qualité exceptionnelle et simple d'utilisation. Merci MY TV !"</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MY TV. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Initialisation du carrousel
+        $(document).ready(function () {
+            $('.carousel-slider').slick({
+                autoplay: true,
+                dots: true,
+                arrows: false
+            });
+        });
+
+        // Fonction pour afficher plus d'informations
+        function showMoreInfo(capture) {
+            Swal.fire({
+                title: 'Informations sur ' + capture,
+                text: 'Profitez de vos chaînes préférées où que vous soyez.',
+                icon: 'info',
+                confirmButtonText: 'Fermer'
+            });
+        }
+
+         // Affiche le pop-up de bienvenue
+         window.onload = function () {
+            Swal.fire({
+                title: 'Bienvenue sur AFRICA BOX',
+                text: 'Téléchargez l’application maintenant ou rejoignez-nous sur WhatsApp',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Télécharger',
+                cancelButtonText: 'WhatsApp',
+                cancelButtonColor: '#25D366',
+                confirmButtonColor: '#130499'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirection vers le lien de téléchargement
+                    window.open('https://play.google.com/store/apps/details?id=rtb.aplinig', '_blank');
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    // Redirection vers WhatsApp
+                    window.open('https://chat.whatsapp.com/IbL05nkT3TLDwyVyYgC3Bh', '_blank'); // Remplacez par votre numéro WhatsApp
+                }
+            });
+        };
+    </script>
+</body>
+</html>
