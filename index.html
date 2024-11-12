@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFRICA BOX - MY TV</title>
+    <title>Streaming Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Google tag (gtag.js) -->
+     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2HZVEX4Y9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -16,297 +15,1351 @@
 
   gtag('config', 'G-E2HZVEX4Y9');
 </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <meta name="description" content="Téléchargez MY TV et profitez de vos chaînes préférées en haute qualité. Compatible avec Android TV, smartphones et tablettes.">
-    <meta name="keywords" content="MY TV, application TV, Android TV, chaînes TV, HD, multi-plateformes">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="AFRICA BOX - MY TV">
-    <meta property="og:description" content="Profitez de vos chaînes préférées où que vous soyez avec MY TV. Téléchargez maintenant !">
-    <meta property="og:image" content="screenshot1.jpg">
-    <meta property="og:url" content="https://votre-site.com">
-    
-    <style>
-        /* Styles globaux */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+</head>
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.3s;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #003366;
-        }
-
-        .header {
-            background: linear-gradient(to right, #055709, #fff700);
-            color: #f7f7f7;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .header .btn {
-            background: #130499;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .header .btn:hover {
-            background: #0044cc;
-            transform: scale(1.1);
-        }
-
-        h2 {
-            text-align: center;
-            color: #003366;
-            margin-bottom: 20px;
-        }
-
-        /* Carrousel */
-        .carousel-slider {
-            position: relative;
-        }
-
-        .carousel-slider img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .carousel-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #130499;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .carousel-button:hover {
-            background: #0044cc;
-        }
-
-        /* Témoignages */
-        .testimonial-item {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .testimonial-item h3 {
-            margin: 0 0 10px;
-            color: #055709;
-        }
-
-        /* Blog */
-        .blog-item {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px 0;
-        }
-
-        .blog-item h3 {
-            margin: 0 0 10px;
-            color: #055709;
-        }
-
-        /* Footer */
-        .footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .carousel-slider img, .carousel-slider {
-                width: 100%;
-            }
-        }
-
-        .blog-item {
+/* Style général du header */
+.header {
+    background: #003366;
+    color: white;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Permet de s'adapter sur plusieurs lignes */
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Titre */
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    flex: 1; /* Le titre prendra tout l'espace disponible si nécessaire */
+}
+
+/* Boutons de navigation */
+.nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Les boutons se répartiront sur plusieurs lignes si besoin */
+}
+
+.nav button {
+    padding: 10px 15px;
+    border: none;
+    background: #ff6600;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.nav button:hover {
+    background: #cc5200;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    flex: 1; /* La barre de recherche prend tout l'espace disponible */
+}
+
+.search-bar input {
+    flex: 1; /* L'entrée prend tout l'espace disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background: #ff6600;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #cc5200;
+}
+
+/* Adaptabilité pour petits écrans */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Les éléments se positionnent en colonne */
+        align-items: stretch; /* Les éléments s'étendent sur toute la largeur */
+    }
+
+    .nav {
+        justify-content: center; /* Les boutons de navigation sont centrés */
+        flex-wrap: wrap; /* Les boutons se répartiront sur plusieurs lignes si nécessaire */
+    }
+
+    .search-bar {
+        justify-content: center; /* Centre la barre de recherche */
+    }
+
+    .search-bar input, .search-bar button {
+        font-size: 0.9rem; /* Réduit légèrement la taille des polices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.2rem; /* Réduit la taille du titre */
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: column; /* Barre de recherche en colonne */
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%; /* Occupe toute la largeur */
+    }
+
+    .search-bar button {
+        margin-top: 5px; /* Ajoute un petit espace entre l'entrée et le bouton */
+    }
+}
+
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.slide img {
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.live-tv {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.channels button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #130499;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#tv-player {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    background: #000;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ff6600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6600;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+#newsletter-form {
+    display: flex;
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    flex: 0 0 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+}
+
+.slide img, .slide video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.slide-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.slide-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.slide-content p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+.slide-content button {
+    padding: 10px 15px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.slide-content button:hover {
+    background: #0056b3;
+}
+
+.recommendations {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.recommendations h2 {
+    font-size: 1.8em;
+    color: #003366;
     margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #cc5200;
+}
+.categories {
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.category-buttons {
+    margin-bottom: 20px;
+}
+
+.category-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #130499;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.category-buttons button:hover {
+    background: #0044cc;
+}
+
+.category-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.category-card {
+    background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
-    background: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog-item img {
-    max-width: 100%;
-    height: auto;
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+    width: 100%;
     border-radius: 5px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-item h3 {
     margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 1.2em;
     color: #003366;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
-.blog-item p {
-    text-align: center;
-    color: #555;
+.category-card button {
+    padding: 10px 15px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.blog-button {
-    display: inline-block;
-    margin-top: 15px;
+.category-card button:hover {
+    background: #cc5200;
+}
+#toggle-channels-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
     background: #130499;
     color: white;
-    text-decoration: none;
-    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
     transition: background 0.3s ease;
 }
 
-.blog-button:hover {
+#toggle-channels-btn:hover {
     background: #0044cc;
 }
 
-    </style>
-</head>
+</style>
 <body>
     <header class="header">
-        <div class="container">
-            <h1>AFRICA BOX - MY TV</h1>
-            <p>Profitez de vos chaînes préférées où que vous soyez.</p>
-            <br>
-            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="btn" id="downloadBtn">Télécharger l'application</a>
+        <h1>TV EN DIRECT</h1>
+        <div class="nav">
+            <button onclick="downloadApp()">Télécharger l'application</button>
         </div>
+     
     </header>
-    <!-- Carrousel -->
-    <section class="screenshots">
-        <div class="container">
-            <h2>Captures d'écran</h2>
-            <div class="carousel-slider">
-                <div>
-                    <img src="https://play-lh.googleusercontent.com/-PQRzKbBatdlwh85_ksCdzRzPz500C97fk9Qc8FBbP0EubWTnEPa4YQzNBvsyNPLxss=w526-h296-rw" alt="Capture 1">
-                    <button class="carousel-button" onclick="showMoreInfo('Capture 1')">En savoir plus</button>
+    
+
+    <section class="banner">
+        <h2>TV EN DIRECT</h2>
+        <div class="carousel">
+            <div class="slide">
+                <center><img src="https://play-lh.googleusercontent.com/65Y7cwWNjL_N3bxjeWdRMyy_a2WbKRmbPclBpJWbZU_PFvN0x8ENYDcz4SNOFVS7aw=w416-h235-rw" alt="Promotion 1">
+                <div class="slide-content">
+                    <h3>PLUS DE 1500 CHAINES </h3>
+                    <p>Plongez dans le Divertissement.</p>
+                    <button onclick="downloadApp()">Télécharger l'application</button>
                 </div>
-                <div>
-                    <img src="https://play-lh.googleusercontent.com/2lAVyB9hctG-nAqIP9ghn_R1S3q0GmSHgQmPZbwUr9IGgvFrI-inAWcQ_LPF6Mq_8gI=w2560-h1440-rw" alt="Capture 2">
-                    <button class="carousel-button" onclick="showMoreInfo('Capture 2')">En savoir plus</button>
+            </div>
+            <div class="slide">
+                <center><img src="https://play-lh.googleusercontent.com/65Y7cwWNjL_N3bxjeWdRMyy_a2WbKRmbPclBpJWbZU_PFvN0x8ENYDcz4SNOFVS7aw=w416-h235-rw" alt="Promotion 1">
+                <div class="slide-content">
+                    <h3>Suivez vos séries exclusives</h3>
+                    <p>Un contenu unique disponible uniquement en direct.</p>
+                    <button onclick="downloadApp()">Télécharger l'application</button>
                 </div>
-                <div>
-                    <img src="https://play-lh.googleusercontent.com/PLghLU74fsS9ER6pzJfyVPsuxc9KFbU8GqPdSYCEZNzaoBSP9Qkq0LH-XZph1hJSVYA=w2560-h1440-rw" alt="Capture 3">
-                    <button class="carousel-button" onclick="showMoreInfo('chaînes Africaines')">En savoir plus</button>
+            </div>
+            <div class="slide">
+                <center><img src="https://play-lh.googleusercontent.com/3oU2oUySW0Hii_TeuSFeHudUD_SCDIov0uALhQNXZX7I8v_OPW1IfRjGU58r3jhtMQI=w416-h235-rw" alt="Promotion 3">
+                <div class="slide-content">
+                    <h3>SPORT EN DIRECT 24/7</h3>
+                    <p>Regardez vos confrontations préférées en haute qualité.</p>
+                    <button onclick="downloadApp()">Télécharger l'application</button>
                 </div>
             </div>
         </div>
     </section>
-<!-- Blog -->
-<section class="blog">
-    <div class="container">
-        <h2>Actualités</h2>
-        <div class="blog-item">
-            <img src="https://play-lh.googleusercontent.com/MGQhQAX1Pwj-SLPtuiZn75pEFrG-_6AePWEGYggfxMNIUH0krwb2sUd_yI5vNML2M8AI=w2560-h1440-rw" alt="Image pour le lancement de MY TV" class="blog-image">
-            <h3>Lancement de MY TV</h3>
-            <p>Découvrez notre application et profitez de vos chaînes préférées dès aujourd'hui.</p>
-            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="blog-button">Télécharger l'application</a>
-        </div>
-        <div class="blog-item">
-            <img src="https://play-lh.googleusercontent.com/f2BqgNdG_FA6EcWD0VpK2dUoQUUyG2WLZlrc5omFJnQCAmNaEgzkh4UYyCNFNxTyHFhL=w416-h235-rw" alt="Image pour la mise à jour de MY TV" class="blog-image">
-            <h3>Nouvelle Mise à Jour</h3>
-            <p>Ajout de 10 nouvelles chaînes et meilleure qualité de streaming.</p>
-            <a href="https://play.google.com/store/apps/details?id=rtb.aplinig" class="blog-button">Télécharger l'application</a>
-        </div>
-    </div>
-</section>
     
-    <!-- Témoignages -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>Témoignages</h2>
-            <div class="testimonial-item">
-                <h3>John Doe</h3>
-                <p>"MY TV est la meilleure application pour regarder la TV en HD. Super interface !"</p>
+    <section class="categories">
+        <h2>Catégories</h2>
+        <div class="category-buttons">
+            <button onclick="filterContent('Live TV')">EVENNEMENTS EN DIRECT</button>
+           
+        </div>
+        <div class="category-content">
+            <!-- Contenu dynamique ajouté ici -->
+        </div>
+    </section>
+    
+
+    <section class="recommendations">
+        <h2>Recommandations pour Vous</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/CYG44lRUwAE04cp.jpg" alt="Film 1">
+                <h3>CHAINES AFRICAINES</h3>
+                <p>Suivez le tout en direct sur l'application gratuitement.</p>
+                <button onclick="downloadApp()">Télécharger l'application</button>
             </div>
-            <div class="testimonial-item">
-                <h3>Jane Smith</h3>
-                <p>"Qualité exceptionnelle et simple d'utilisation. Merci MY TV !"</p>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWOKNHXO7CmmwvoCnBz3yBZjv5m_QcYk-CQ&s" alt="Série 1">
+                <h3>NEW WORLD TV</h3>
+                <p>Rtrouvez tout le bouquet sur votre application.</p>
+                <button onclick="downloadApp()">Télécharger l'application</button>
+            </div>
+            <div class="card">
+                <img src="https://thumb.canalplus.pro/bran/unsafe/1400x/filters:quality(%7BimageQualityPercentage%7D)/image/66deab1ea4d83/uploads/media/COVER_DESKTOP_1920x1080.jpg" alt="Film 2">
+                <h3>LE SPORT EN DIRECT</h3>
+                <p>Suivez vos compétitions en direct partout.</p>
+                <button onclick="downloadApp()">Télécharger l'application</button>
+            </div>
+            <div class="card">
+                <img src="https://www.freenews.fr/wp-content/uploads/2022/12/app-myCANAL.jpg" alt="Série 2">
+                <h3>FILMS ET SERIES</h3>
+                <p>Le meilleur du Divertissement.</p>
+                <button onclick="downloadApp()">Télécharger l'application</button>
             </div>
         </div>
     </section>
     
+
+    <section class="live-tv">
+        <h2>Chaînes TV en Direct</h2>
+        <div class="channels">
+            <!-- Chaînes toujours visibles -->
+            <button class="channel-button" onclick="changeChannel('http://69.64.57.208/telesahel/playlist.m3u8')">
+                <img src="https://lo1.in/af/telesahel.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216385.m3u8')">
+                <img src="https://lo1.in/af/rtl9.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('http://69.64.57.208/rts1/playlist.m3u8')">
+                <img src="https://lo1.in/af/rts.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59284.m3u8')">
+                <img src="https://lo1.in/af/rts.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216393.m3u8')">
+                <img src="https://lo1.in/af/ortb.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216392.m3u8')">
+                <img src="https://lo1.in/af/ortm.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59264.m3u8')">
+                <img src="https://lo1.in/af/tele50.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59266.m3u8')">
+                <img src="https://lo1.in/af/tgb.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59267.m3u8')">
+                <img src="https://lo1.in/af/tivi5.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59269.m3u8')">
+                <img src="https://lo1.in/af/rm1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59271.m3u8')">
+                <img src="https://lo1.in/af/tv10.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59275.m3u8')">
+                <img src="https://lo1.in/af/tvtogo.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59280.m3u8')">
+                <img src="https://lo1.in/af/rtd1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59283.m3u8')">
+                <img src="https://lo1.in/af/rtnb.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59287.m3u8')">
+                <img src="https://lo1.in/af/bayane.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59288.m3u8')">
+                <img src="https://lo1.in/af/alafiamr.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216438.m3u8')">
+                <img src="https://lo1.in/af/caplsact.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216434.m3u8')">
+                <img src="https://lo1.in/af/caplselouest.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216432.m3u8')">
+                <img src="https://lo1.in/af/caplsouest.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163044.m3u8')">
+                <img src="https://lo1.in/af/cnpop.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo473001.m3u8')">
+                <img src="https://lo1.in/fr/cnlp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59211.m3u8')">
+                <img src="https://lo1.in/af/ca3bur.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239771.m3u8')">
+                <img src="https://lo1.in/af/voxaf.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239760.m3u8')">
+                <img src="https://lo1.in/fr/plp1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239758.m3u8')">
+                <img src="https://lo1.in/fr/cnpfr1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400225126.m3u8')">
+                <img src="https://lo1.in/af/paramont.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216447.m3u8')">
+                <img src="https://lo1.in/af/action.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216420.m3u8')">
+                <img src="https://lo1.in/af/disneycha.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216405.m3u8')">
+                <img src="https://lo1.in/af/ludikds.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59240.m3u8')">
+                <img src="https://lo1.in/af/lifetm.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401459607.m3u8')">
+                <img src="https://lo1.in/af/af.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239746.m3u8')">
+                <img src="https://lo1.in/af/rmcsp20.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239745.m3u8')">
+                <img src="https://lo1.in/af/rmcsp30.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216389.m3u8')">
+                <img src="https://lo1.in/af/rmcsp400.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216442.m3u8')">
+                <img src="https://lo1.in/af/automoto.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216415.m3u8')">
+                <img src="https://lo1.in/af/eurosp1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216414.m3u8')">
+                <img src="https://lo1.in/af/eurosp2.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239763.m3u8')">
+                <img src="https://lo1.in/fr/infsp1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216398.m3u8')">
+                <img src="https://lo1.in/af/nba1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59259.m3u8')">
+                <img src="https://lo1.in/af/scietvie.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59261.m3u8')">
+                <img src="https://lo1.in/af/stv.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo59262.m3u8')">
+                <img src="https://lo1.in/af/sud1ere.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401389138.m3u8')">
+                <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401389137.m3u8')">
+                <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401389136.m3u8')">
+                <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401389135.m3u8')">
+                <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo401389134.m3u8')">
+                <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216431.m3u8')">
+                <img src="https://lo1.in/af/caplssp1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163033.m3u8')">
+                <img src="https://lo1.in/fr/cnlpsp0.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216430.m3u8')">
+                <img src="https://lo1.in/af/caplssp2.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163032.m3u8')">
+                <img src="https://lo1.in/fr/cnlpsp0.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216429.m3u8')">
+                <img src="https://lo1.in/af/caplssp3.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163031.m3u8')">
+                <img src="https://lo1.in/fr/cnlpsp0.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216428.m3u8')">
+                <img src="https://lo1.in/af/caplssp4.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163030.m3u8')">
+                <img src="https://lo1.in/fr/cnlpsp0.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400216427.m3u8')">
+                <img src="https://lo1.in/af/af.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo163029.m3u8')">
+                <img src="https://lo1.in/fr/cnlpsp0.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo378288.m3u8')">
+                <img src="https://lo1.in/fr/cnlp.l.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('africabo400239747.m3u8')">
+                <img src="https://lo1.in/af/rmcsp10.png" style="max-width: 100px; height: auto;">
+                <button class="channel-button" onclick="changeChannel('africabo59240.m3u8')">
+                    <img src="https://lo1.in/af/lifetm.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401459607.m3u8')">
+                    <img src="https://lo1.in/af/af.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400239746.m3u8')">
+                    <img src="https://lo1.in/af/rmcsp20.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400239745.m3u8')">
+                    <img src="https://lo1.in/af/rmcsp30.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400216389.m3u8')">
+                    <img src="https://lo1.in/af/rmcsp400.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400216442.m3u8')">
+                    <img src="https://lo1.in/af/automoto.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400216415.m3u8')">
+                    <img src="https://lo1.in/af/eurosp1.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400216414.m3u8')">
+                    <img src="https://lo1.in/af/eurosp2.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400239763.m3u8')">
+                    <img src="https://lo1.in/fr/infsp1.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo400216398.m3u8')">
+                    <img src="https://lo1.in/af/nba1.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo59259.m3u8')">
+                    <img src="https://lo1.in/af/scietvie.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo59261.m3u8')">
+                    <img src="https://lo1.in/af/stv.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo59262.m3u8')">
+                    <img src="https://lo1.in/af/sud1ere.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401389138.m3u8')">
+                    <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401389137.m3u8')">
+                    <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401389136.m3u8')">
+                    <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401389135.m3u8')">
+                    <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo401389134.m3u8')">
+                    <img src="https://lo1.in/fr/cnlppp.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156635.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156634.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156633.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156632.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156631.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156630.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156629.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo156628.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28197.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28198.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28199.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28200.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28201.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28202.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28203.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28204.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28205.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28206.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28207.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28208.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28209.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28210.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28211.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28212.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28213.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28214.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28215.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+                <button class="channel-button" onclick="changeChannel('africabo28216.m3u8')">
+                    <img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;">
+                </button>
+            </button>
+            <button class="channel-button" onclick="changeChannel('http://69.64.57.208/rts1/playlist.m3u8')">
+                <img src="https://lo1.in/af/rti1.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('https://www.enovativecdn.com/rticdn/smil:rti2.smil/playlist.m3u8')">
+                <img src="https://lo1.in/af/rti2.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('https://cdnapisec.kaltura.com/p/5571652/sp/5571652/playManifest/entryId/1_no7nfr0h/deliveryProfileId/672/protocol/https/format/applehttp/a.m3u8')">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/9/9e/NCI_Logo.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('https://video1.getstreamhosting.com:1936/8244/8244/playlist.m3u8')">
+                <img src="https://gamako.net/ivoirechannel.ci/wa_images/fichier%2012x.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('https://voozmedia.fun/benietv/livestream/playlist.m3u8')">
+                <img src="https://lo1.in/af/benie.png" style="max-width: 100px; height: auto;">
+            </button>
+            <button class="channel-button" onclick="changeChannel('http://69.64.57.208/burkinainfo/index.m3u8')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp5ZEpX7eAwDeTY-i1R1fEtUivVH0i9QbwvaBM80DJhHooVQxmoFKGzUEM3KZ1MgLejA&usqp=CAU" style="max-width: 100px; height: auto;">
+            </button>
+            </div>
+            <!-- Chaînes masquées par défaut -->
+            <div class="hidden-channels" style="display: none;">
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216403.m3u8')"><img src="https://lo1.in/af/manga.png"  style="max-width: 100px; height: auto;">MANGAS 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo23424.m3u8')"><img src="https://lo1.in/it/cart.png"  style="max-width: 100px; height: auto;">CARTOON NETWORK
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216397.m3u8')"><img src="https://lo1.in/af/nicko.png"  style="max-width: 100px; height: auto;">NICKELODEON 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225184.m3u8')"><img src="https://lo1.in/af/nickjr.png"  style="max-width: 100px; height: auto;">NICKELODEON JR 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216391.m3u8')"><img src="https://lo1.in/af/piwipls.png"  style="max-width: 100px; height: auto;">PIWI+ 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216379.m3u8')"><img src="https://lo1.in/af/teletonps.png"  style="max-width: 100px; height: auto;">TELETOON+ 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216375.m3u8')"><img src="https://lo1.in/af/tiji.png"  style="max-width: 100px; height: auto;">TIJI 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216409.m3u8')"><img src="https://lo1.in/af/gulliaf.png"  style="max-width: 100px; height: auto;">GULLI AFRICA 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216407.m3u8')"><img src="https://lo1.in/af/j1.png"  style="max-width: 100px; height: auto;">J-ONE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo32040.m3u8')"><img src="https://lo1.in/fr/JUNIOR.png"  style="max-width: 100px; height: auto;">CANAL C JUNIOR
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163027.m3u8')"><img src="https://lo1.in/af/tf1.png"  style="max-width: 100px; height: auto;">TF1 SD
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163026.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">TF1 SERIES FILMS 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216412.m3u8')"><img src="https://lo1.in/af/fr24.png"  style="max-width: 100px; height: auto;">FRANCE 24 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216413.m3u8')"><img src="https://lo1.in/af/fr2.png"  style="max-width: 100px; height: auto;">FRANCE 2 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400273409.m3u8')"><img src="https://lo1.in/fr/fr3hd.png"  style="max-width: 100px; height: auto;">FRANCE 3 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400273410.m3u8')"><img src="https://lo1.in/fr/fr4hd.png"  style="max-width: 100px; height: auto;">FRANCE 4 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239765.m3u8')"><img src="https://lo1.in/af/5.png"  style="max-width: 100px; height: auto;">FRANCE 5 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216363.m3u8')"><img src="https://lo1.in/af/tv5.png"  style="max-width: 100px; height: auto;">TV5 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216423.m3u8')"><img src="https://lo1.in/af/crtv.png"  style="max-width: 100px; height: auto;">CRTV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216404.m3u8')"><img src="https://lo1.in/af/m6inter.png"  style="max-width: 100px; height: auto;">M6 INTERNATIONAL 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216406.m3u8')"><img src="https://lo1.in/af/lci.png"  style="max-width: 100px; height: auto;">LCI 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216382.m3u8')"><img src="https://lo1.in/af/sentv.png"  style="max-width: 100px; height: auto;">SEN TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216450.m3u8')"><img src="https://lo1.in/af/2stv.png"  style="max-width: 100px; height: auto;">2STV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216448.m3u8')"><img src="https://lo1.in/af/ab1.png"  style="max-width: 100px; height: auto;">AB1 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216446.m3u8')"><img src="https://lo1.in/af/afble.png"  style="max-width: 100px; height: auto;">AFRICABLE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216445.m3u8')"><img src="https://lo1.in/af/aminaux.png"  style="max-width: 100px; height: auto;">ANIMAUX 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216449.m3u8')"><img src="https://lo1.in/af/aplsinter.png"  style="max-width: 100px; height: auto;">A+ INTERNATIONAL 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216441.m3u8')"><img src="https://lo1.in/af/b1.png"  style="max-width: 100px; height: auto;">B-ONE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216426.m3u8')"><img src="https://lo1.in/af/canal2int.png"  style="max-width: 100px; height: auto;">CANAL 2 INTERNATIONAL 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216425.m3u8')"><img src="https://lo1.in/af/cherifla.png"  style="max-width: 100px; height: auto;">CHERIFLA 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216424.m3u8')"><img src="https://lo1.in/af/cns.png"  style="max-width: 100px; height: auto;">CNEWS 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239769.m3u8')"><img src="https://lo1.in/af/af24.png"  style="max-width: 100px; height: auto;">AFRICA 24 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239764.m3u8')"><img src="https://lo1.in/fr/eurns1.png"  style="max-width: 100px; height: auto;">EURONEWS 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239756.m3u8')"><img src="https://lo1.in/fr/bfmtv.png"  style="max-width: 100px; height: auto;">BFM TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216422.m3u8')"><img src="https://lo1.in/af/cuisi.png"  style="max-width: 100px; height: auto;">CUISINES 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216439.m3u8')"><img src="https://lo1.in/af/c8.png"  style="max-width: 100px; height: auto;">C8 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo35515.m3u8')"><img src="https://lo1.in/hol/tvc1.png"  style="max-width: 100px; height: auto;">TVC
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216421.m3u8')"><img src="https://lo1.in/af/discchan.png"  style="max-width: 100px; height: auto;">DISCOVERY CHANNEL 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239761.m3u8')"><img src="https://lo1.in/FR/diss.png"  style="max-width: 100px; height: auto;">DISCOVERY SCIENCE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo355045.m3u8')"><img src="https://lo1.in/af/invesdisco.png"  style="max-width: 100px; height: auto;">INVESTIGATION DISCOVERY 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216400.m3u8')"><img src="https://lo1.in/af/natgeow.png"  style="max-width: 100px; height: auto;">NAT GEO WILD 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216399.m3u8')"><img src="https://lo1.in/af/natgeo.png"  style="max-width: 100px; height: auto;">NATIONAL GEOGRAPHIC 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225149.m3u8')"><img src="https://lo1.in/fr/his.png"  style="max-width: 100px; height: auto;">HISTOIRE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216390.m3u8')"><img src="https://lo1.in/af/planetpls.png"  style="max-width: 100px; height: auto;">PLANETE+ 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo23407.m3u8')"><img src="https://lo1.in/ca/plntpls.png"  style="max-width: 100px; height: auto;">PLANETE+ CRIME
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo23408.m3u8')"><img src="https://lo1.in/ca/plntpls.png"  style="max-width: 100px; height: auto;">PLANETE+ AVENTURE
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216374.m3u8')"><img src="https://lo1.in/af/ttelhistoir.png"  style="max-width: 100px; height: auto;">TOUTE L HISTOIRE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163034.m3u8')"><img src="https://lo1.in/af/cndocs.png"  style="max-width: 100px; height: auto;">CANAL+ DOCS SD
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163021.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">CRIME DISTRICT 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225131.m3u8')"><img src="https://lo1.in/af/museum.png"  style="max-width: 100px; height: auto;">MUSEUM TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216418.m3u8')"><img src="https://lo1.in/af/engclub.png"  style="max-width: 100px; height: auto;">ENGLISH CLUB TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216417.m3u8')"><img src="https://lo1.in/af/equinox.png"  style="max-width: 100px; height: auto;">EQUINOXE TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo21000.m3u8')"><img src="https://lo1.in/af/btrlf.png"  style="max-width: 100px; height: auto;">BETTER LIFE TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216411.m3u8')"><img src="https://lo1.in/af/gbn1.png"  style="max-width: 100px; height: auto;">GABON TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo23419.m3u8')"><img src="https://lo1.in/dstv/gabon.png"  style="max-width: 100px; height: auto;">GABON 1ERE HD
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216410.m3u8')"><img src="https://lo1.in/af/game1.png"  style="max-width: 100px; height: auto;">GAME ONE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216388.m3u8')"><img src="https://lo1.in/af/rtb.png"  style="max-width: 100px; height: auto;">RTB 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216387.m3u8')"><img src="https://lo1.in/af/rtg.png"  style="max-width: 100px; height: auto;">RTG 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216384.m3u8')"><img src="https://lo1.in/af/rtnc1.png"  style="max-width: 100px; height: auto;">RTNC 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239768.m3u8')"><img src="https://lo1.in/af/telecong.png"  style="max-width: 100px; height: auto;">TELE CONGO 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239767.m3u8')"><img src="https://lo1.in/fr/art.png"  style="max-width: 100px; height: auto;">ARTE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239766.m3u8')"><img src="https://lo1.in/fr/13emruhd0.png"  style="max-width: 100px; height: auto;">13EME RUE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400239757.m3u8')"><img src="https://lo1.in/fr/nj12.png"  style="max-width: 100px; height: auto;">NRJ12 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225108.m3u8')"><img src="https://lo1.in/af/telesud.png"  style="max-width: 100px; height: auto;">TELESUD TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo14486.m3u8')"><img src="https://lo1.in/af/e.png"  style="max-width: 100px; height: auto;">E! ENTERTAINMENT TELEVISION 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216381.m3u8')"><img src="https://lo1.in/af/sunuyeuf.png"  style="max-width: 100px; height: auto;">SUNU YEUF 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225165.m3u8')"><img src="https://lo1.in/af/caeven.png"  style="max-width: 100px; height: auto;">CANAL EVENEMENT AFRIQUE 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400225137.m3u8')"><img src="https://lo1.in/af/medprime.png"  style="max-width: 100px; height: auto;">MEDIA PRIME SD
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216380.m3u8')"><img src="https://lo1.in/af/syfy.png"  style="max-width: 100px; height: auto;">SYFY 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216377.m3u8')"><img src="https://lo1.in/af/tfm.png"  style="max-width: 100px; height: auto;">TFM 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216376.m3u8')"><img src="https://lo1.in/af/tfx.png"  style="max-width: 100px; height: auto;">TFX 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163019.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">MGG TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216364.m3u8')"><img src="https://lo1.in/af/trek.png"  style="max-width: 100px; height: auto;">TREK 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo400216362.m3u8')"><img src="https://lo1.in/af/tvt.png"  style="max-width: 100px; height: auto;">TVT 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163002.m3u8')"><img src="https://lo1.in/af/ltv.png"  style="max-width: 100px; height: auto;">LIPTAKO TV  
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163007.m3u8')"><img src="https://lo1.in/af/asfiyahi.png"  style="max-width: 100px; height: auto;">ASFIYAHI 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163008.m3u8')"><img src="https://lo1.in/fr/wta.png"  style="max-width: 100px; height: auto;">WATAAA 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163014.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">NATHAN TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163016.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">CSTAR 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163018.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">TMC 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo163023.m3u8')"><img src="https://lo1.in/af/af.png"  style="max-width: 100px; height: auto;">USHUAÏA TV 
+                                
+                                <button class="channel-button" onclick="changeChannel('africabo35512.m3u8')"><img src="https://lo1.in/fr/bbcwnews1.png"  style="max-width: 100px; height: auto;">BBC World News
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389133.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 6 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389132.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 7 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389131.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 8 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389130.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 9 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389127.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 10 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389122.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 11 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389118.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 12 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389114.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 13 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389113.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 14 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389112.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 15 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389111.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 16 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389110.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 17 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389109.m3u8')"><img src="https://lo1.in/fr/cnlppp.png"  style="max-width: 100px; height: auto;"> CANAL+ LIVE 18 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo685.m3u8')"><img src="https://lo1.in/fr/bns1.png"  style="max-width: 100px; height: auto;">BEIN SPORTS 1 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo686.m3u8')"><img src="https://lo1.in/fr/bns2.png"  style="max-width: 100px; height: auto;">BEIN SPORTS 2 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo687.m3u8')"><img src="https://lo1.in/fr/bns3.png"  style="max-width: 100px; height: auto;">BEIN SPORTS 3 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo688.m3u8')"><img src="https://lo1.in/fr/bnsm4.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX4 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo689.m3u8')"><img src="https://lo1.in/fr/bnsm5.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX5 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo690.m3u8')"><img src="https://lo1.in/fr/bnsm6.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX6 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo691.m3u8')"><img src="https://lo1.in/fr/bnsm7.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX7 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo692.m3u8')"><img src="https://lo1.in/fr/bnsm8.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX8 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo693.m3u8')"><img src="https://lo1.in/fr/bnsm9.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX9 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo694.m3u8')"><img src="https://lo1.in/fr/bnsm10.png"  style="max-width: 100px; height: auto;">BEIN SPORTS MAX10 HD 
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo703.m3u8')"><img src="https://lo1.in/FR/eursp1.png"  style="max-width: 100px; height: auto;">EUROSPORT 1 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo704.m3u8')"><img src="https://lo1.in/FR/eurs2.png"  style="max-width: 100px; height: auto;">EUROSPORT 2 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo695.m3u8')"><img src="https://lo1.in/FR/infsp.png"  style="max-width: 100px; height: auto;">INFOSPORT+ HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo697.m3u8')"><img src="https://lo1.in/FR/leq.png"  style="max-width: 100px; height: auto;">L'EQUIPE HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389147.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> DAZN 1 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389145.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> DAZN 2 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389141.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> DAZN 3 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389140.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> DAZN 4 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo401389139.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> DAZN 5 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231732.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME MULTIPLEX HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400218117.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 1 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231738.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 2 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231737.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 3 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231736.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 4 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231735.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 5 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231734.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 6 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400231733.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 7 HD
+                        
+                        <button class="channel-button" onclick="changeChannel('africabo400272803.m3u8')"><img src="https://lo1.in/fr/dznn.png" style="max-width: 100px; height: auto;"> LIGUE 1 DAZN PRIME 8 HD
+                        
+                        </div>
+                        <!-- Bouton pour afficher/masquer les chaînes -->
+                        <button id="toggle-channels-btn" onclick="toggleChannels()">Voir PLUS ENCORE</button>
+                    </div>
+                </section>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 MY TV. Tous droits réservés.</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À Propos</h3>
+                <p>Avec AFRICA BOX suivez vos chaînes en direct sur smartphone, tablette, PC ou SMART TV.
+                    Emportez la télé partout avec vous depuis votre téléphone Android, tablette, PC ou SMART TV. Retrouvez la majorité des chaînes africaines, européennes, américaines et asiatiques en direct.
+                    Que vous soyez en wifi, en 3G, en 4G ou plus, accédez à la télévision facilement.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#live-tv">Live TV</a></li>
+                    <li><a href="#recommendations">Recommandations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Nous Contacter</h3>
+                <p>Email : <a href="mailto:support@streamingplatform.com">contact@nticsolution.org</a></p>
+                <p>Téléphone : +226 05 58 58 68 </p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/tvafricabox" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/023/741/208/non_2x/facebook-logo-icon-social-media-icon-free-png.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/#" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/467/non_2x/twitter-icon-free-png.png" alt="Twitter"></a>
+                    <a href="https://instagram.com/#" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+           
         </div>
+        <p>&copy; 2024 Africa Box TV. Tous droits réservés.</p>
     </footer>
+    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        // Initialisation du carrousel
-        $(document).ready(function () {
-            $('.carousel-slider').slick({
-                autoplay: true,
-                dots: true,
-                arrows: false
-            });
-        });
+        // Ajoutez ici les fonctionnalités JavaScript nécessaires
 
-        // Fonction pour afficher plus d'informations
-        function showMoreInfo(capture) {
+        // Mode sombre
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Simuler une recherche
+        function searchContent() {
+            const query = document.getElementById('search').value;
             Swal.fire({
-                title: 'Informations sur ' + capture,
-                text: 'Profitez de vos chaînes préférées où que vous soyez.',
-                icon: 'info',
-                confirmButtonText: 'Fermer'
+                title: `Résultats pour "${query}"`,
+                text: "Aucun résultat trouvé (c'est une simulation).",
+                icon: 'info'
             });
         }
 
-         // Affiche le pop-up de bienvenue
-         window.onload = function () {
+        // Afficher le profil
+        function editProfile() {
             Swal.fire({
-                title: 'Bienvenue sur AFRICA BOX',
-                text: 'Téléchargez l’application maintenant ou rejoignez-nous sur WhatsApp',
-                icon: 'info',
-                showCancelButton: true,
-                confirmButtonText: 'Télécharger',
-                cancelButtonText: 'WhatsApp',
-                cancelButtonColor: '#25D366',
-                confirmButtonColor: '#130499'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redirection vers le lien de téléchargement
-                    window.open('https://play.google.com/store/apps/details?id=rtb.aplinig', '_blank');
-                } else if (result.dismiss === Swal.DismissReason.cancel) {
-                    // Redirection vers WhatsApp
-                    window.open('https://chat.whatsapp.com/IbL05nkT3TLDwyVyYgC3Bh', '_blank'); // Remplacez par votre numéro WhatsApp
-                }
+                title: 'Modifier Profil',
+                html: `<input type="text" placeholder="Nom" class="swal2-input">
+                       <input type="file" class="swal2-input">`,
+                confirmButtonText: 'Enregistrer'
             });
-        };
+        }
+
+        // Jouer une chaîne TV
+        function playChannel(url) {
+            const player = document.getElementById('tv-player');
+            player.src = url;
+            player.play();
+        }
+
+        // Ajouter à la watchlist
+        function addToWatchlist(item) {
+            Swal.fire({
+                title: 'Ajouté à la Watchlist',
+                text: `${item} a été ajouté à votre liste à regarder plus tard.`,
+                icon: 'success'
+            });
+        }
+        // Fonction pour afficher des détails spécifiques à chaque promotion
+function showDetails(contentType) {
+    Swal.fire({
+        title: `Détails : ${contentType}`,
+        text: `Découvrez tout le contenu lié à ${contentType}.`,
+        icon: 'info',
+        confirmButtonText: 'Fermer'
+    });
+}
+
+// Ajouter à la Watchlist
+function addToWatchlist(item) {
+    Swal.fire({
+        title: 'Ajouté à la Watchlist',
+        text: `${item} a été ajouté à votre liste à regarder plus tard.`,
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+}
+const categoryContent = document.querySelector('.category-content');
+
+// Contenu par catégorie
+const categories = {
+    'Live TV': [
+        { title: 'CAN 2025', img: 'https://aconews.net/wp-content/uploads/2024/07/can-maroc-2025.jpg', description: 'Football africain en direct.' },
+        { title: 'VIP', img: 'https://www3.0zz0.com/2024/08/31/10/621742161.jpg', description: 'Divertissement 24/7.' },
+        { title: '+18 ANS', img: 'https://www12.0zz0.com/2024/08/14/14/734965785.jpg', description: 'ADULT TV EN DIRECT.' },
+    ],
+};
+
+// Fonction pour filtrer le contenu
+function filterContent(category) {
+    // Vider le contenu existant
+    categoryContent.innerHTML = '';
+
+    // Ajouter le nouveau contenu
+    categories[category].forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('category-card');
+        card.innerHTML = `
+            <img src="${item.img}" alt="${item.title}">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <button onclick="downloadApp()">Télécharger l'application</button>
+        `;
+        categoryContent.appendChild(card);
+    });
+}
+
+// Fonction pour ajouter à la watchlist
+function addToWatchlist(item) {
+    Swal.fire({
+        title: 'Ajouté à la Watchlist',
+        text: `${item} a été ajouté à votre liste à regarder plus tard.`,
+        icon: 'success',
+        confirmButtonText: 'OK',
+    });
+}
+
+// Afficher une catégorie par défaut (par exemple, "Films")
+window.onload = () => filterContent('Films');
+// Gestion du formulaire d'abonnement à la newsletter
+document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const email = this.querySelector('input').value;
+    Swal.fire({
+        title: 'Abonnement réussi',
+        text: `Merci de vous être abonné à notre newsletter, ${email}!`,
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+    this.reset(); // Réinitialiser le formulaire
+});
+
+function downloadApp() {
+    // Lien de téléchargement de l'application
+    const appDownloadUrl = "https://play.google.com/store/apps/details?id=rtb.aplinig";
+
+    // Affichage d'une confirmation avec SweetAlert2
+    Swal.fire({
+        title: 'Téléchargez GRATUITEMENT',
+        text: 'Cliquez sur "Télécharger" pour obtenir notre application depuis le Google Play Store.',
+        icon: 'info',
+        confirmButtonText: 'Télécharger',
+        showCancelButton: true,
+        cancelButtonText: 'Annuler',
+        confirmButtonColor: '#ff6600',
+        cancelButtonColor: '#555'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Redirige vers le lien de téléchargement
+            window.open(appDownloadUrl, '_blank');
+        }
+    });
+}
+function toggleChannels() {
+    const hiddenChannels = document.querySelector('.hidden-channels');
+    const toggleButton = document.getElementById('toggle-channels-btn');
+
+    // Vérifie si les chaînes sont masquées ou affichées
+    if (hiddenChannels.style.display === 'none') {
+        hiddenChannels.style.display = 'block';
+        toggleButton.textContent = 'Voir moins';
+    } else {
+        hiddenChannels.style.display = 'none';
+        toggleButton.textContent = 'Tout Voir';
+    }
+}
+
     </script>
 </body>
 </html>
