@@ -287,7 +287,7 @@
     overflow: hidden;
     position: relative;
     scroll-snap-align: start;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(24, 0, 102, 0.96);
     transition: transform 0.3s;
 }
 
@@ -358,16 +358,16 @@
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(8, 17, 196);
     padding: 15px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 200px;
+    width: auto;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(7, 167, 79, 0.903);
 }
 
 .card img {
@@ -385,7 +385,7 @@
 
 .card p {
     font-size: 0.9em;
-    color: #555;
+    color: #0b0813;
     margin-bottom: 15px;
 }
 
@@ -503,7 +503,10 @@
     <header class="header">
         <h1>TV EN DIRECT</h1>
         <div class="nav">
-            <button onclick="downloadApp()">Télécharger l'application</button>
+            <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #cc5200; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+               Télécharge sur Play Store
+            </button>
         </div>
      
     </header>
@@ -517,7 +520,12 @@
                 <div class="slide-content">
                     <h3>PLUS DE 1500 CHAINES </h3>
                     <p>Plongez dans le Divertissement.</p>
-                    <button onclick="downloadApp()">Télécharger l'application</button>
+                    <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                       Disponible sur Play Store
+                    </button>
+                    
+                    
                 </div>
             </div>
             <div class="slide">
@@ -525,7 +533,10 @@
                 <div class="slide-content">
                     <h3>Suivez vos séries exclusives</h3>
                     <p>Un contenu unique disponible uniquement en direct.</p>
-                    <button onclick="downloadApp()">Télécharger l'application</button>
+                    <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                       Disponible sur Play Store
+                    </button>
                 </div>
             </div>
             <div class="slide">
@@ -533,54 +544,72 @@
                 <div class="slide-content">
                     <h3>SPORT EN DIRECT 24/7</h3>
                     <p>Regardez vos confrontations préférées en haute qualité.</p>
-                    <button onclick="downloadApp()">Télécharger l'application</button>
+                    <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                       Disponible sur Play Store
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <section class="recommendations">
+        <h2>EN DIRECT</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://pbs.twimg.com/media/CYG44lRUwAE04cp.jpg" alt="Film 1">
+                <h3>CHAINES AFRICAINES</h3>
+                <p>Suivez le tout en direct sur l'application gratuitement.</p>
+                <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                    <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                   Disponible sur Play Store
+                </button>
+                
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWOKNHXO7CmmwvoCnBz3yBZjv5m_QcYk-CQ&s" alt="Série 1">
+                <h3>NEW WORLD TV</h3>
+                <p>Rtrouvez tout le bouquet sur votre application.</p>
+                <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                    <img src="https://img.icons8.com/ios-glyphs/20/ffffff/play.png" alt="Regarder" style="margin-right: 10px; width: 16px; height: 16px;">
+                    Regarder Maintenant
+                </button>
+                
+            </div>
+            <div class="card">
+                <img src="https://thumb.canalplus.pro/bran/unsafe/1400x/filters:quality(%7BimageQualityPercentage%7D)/image/66deab1ea4d83/uploads/media/COVER_DESKTOP_1920x1080.jpg" alt="Film 2">
+                <h3>LE SPORT EN DIRECT</h3>
+                <p>Suivez vos compétitions en direct partout.</p>
+                <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                    <img src="https://img.icons8.com/ios-glyphs/20/ffffff/play.png" alt="Regarder" style="margin-right: 10px; width: 16px; height: 16px;">
+                    Regarder Maintenant
+                </button>
+                
+            </div>
+            <div class="card">
+                <img src="https://www.freenews.fr/wp-content/uploads/2022/12/app-myCANAL.jpg" alt="Série 2">
+                <h3>FILMS ET SERIES</h3>
+                <p>Le meilleur du Divertissement.</p>
+                <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #ff6600; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                    <img src="https://img.icons8.com/ios-glyphs/20/ffffff/play.png" alt="Regarder" style="margin-right: 10px; width: 16px; height: 16px;">
+                    Regarder Maintenant
+                </button>
+                
+                
+            </div>
+        </div>
+    </section>
+
     <section class="categories">
         <h2>EN EXCLUSIVITE</h2>
         <div class="category-buttons">
-            <button onclick="filterContent('Live TV')">EVENNEMENTS EN DIRECT</button>
+            <button onclick="filterContent('Live TV')">EVENNEMENTS TV</button>
            
         </div>
         <div class="category-content">
             <!-- Contenu dynamique ajouté ici -->
         </div>
     </section>
-    
-
-    <section class="recommendations">
-        <h2>CONTNU EN DIRECT</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://pbs.twimg.com/media/CYG44lRUwAE04cp.jpg" alt="Film 1">
-                <h3>CHAINES AFRICAINES</h3>
-                <p>Suivez le tout en direct sur l'application gratuitement.</p>
-                <button onclick="downloadApp()">Télécharger l'application</button>
-            </div>
-            <div class="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWOKNHXO7CmmwvoCnBz3yBZjv5m_QcYk-CQ&s" alt="Série 1">
-                <h3>NEW WORLD TV</h3>
-                <p>Rtrouvez tout le bouquet sur votre application.</p>
-                <button onclick="downloadApp()">Télécharger l'application</button>
-            </div>
-            <div class="card">
-                <img src="https://thumb.canalplus.pro/bran/unsafe/1400x/filters:quality(%7BimageQualityPercentage%7D)/image/66deab1ea4d83/uploads/media/COVER_DESKTOP_1920x1080.jpg" alt="Film 2">
-                <h3>LE SPORT EN DIRECT</h3>
-                <p>Suivez vos compétitions en direct partout.</p>
-                <button onclick="downloadApp()">Télécharger l'application</button>
-            </div>
-            <div class="card">
-                <img src="https://www.freenews.fr/wp-content/uploads/2022/12/app-myCANAL.jpg" alt="Série 2">
-                <h3>FILMS ET SERIES</h3>
-                <p>Le meilleur du Divertissement.</p>
-                <button onclick="downloadApp()">Télécharger l'application</button>
-            </div>
-        </div>
-    </section>
-    
 
     <section class="live-tv">
         <h2>Chaînes TV en Direct</h2>
@@ -1171,7 +1200,7 @@
                         
                         </div>
                         <!-- Bouton pour afficher/masquer les chaînes -->
-                        <button id="toggle-channels-btn" onclick="toggleChannels()">Voir PLUS ENCORE</button>
+                        <button id="toggle-channels-btn" onclick="toggleChannels()">VOIR PLUS ENCORE</button>
                     </div>
                 </section>
 
@@ -1184,32 +1213,25 @@
                     Que vous soyez en wifi, en 3G, en 4G ou plus, accédez à la télévision facilement.</p>
             </div>
             <div class="footer-section">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#categories">Catégories</a></li>
-                    <li><a href="#live-tv">Live TV</a></li>
-                    <li><a href="#recommendations">Recommandations</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
                 <h3>Nous Contacter</h3>
                 <p>Email : <a href="mailto:support@streamingplatform.com">contact@nticsolution.org</a></p>
                 <p>Téléphone : +226 05 58 58 68 </p>
                 <div class="social-icons">
                     <a href="https://facebook.com/tvafricabox" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/023/741/208/non_2x/facebook-logo-icon-social-media-icon-free-png.png" alt="Facebook"></a>
                     <a href="https://twitter.com/#" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/467/non_2x/twitter-icon-free-png.png" alt="Twitter"></a>
-                    <a href="https://instagram.com/#" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp"></a>
+                    <a href="https://chat.whatsapp.com/IbL05nkT3TLDwyVyYgC3Bh" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/016/716/480/non_2x/whatsapp-icon-free-png.png" alt="WhatsApp"></a>
                 </div>
             </div>
-           
+            <div class="footer-section">
+                <h3>Nos Produits</h3>
+                <p>A venir...</p>
+            </div>
         </div>
         <p>&copy; 2024 Africa Box TV. Tous droits réservés.</p>
     </footer>
     
 
     <script>
-        // Ajoutez ici les fonctionnalités JavaScript nécessaires
 
         // Mode sombre
         function toggleTheme() {
@@ -1294,7 +1316,7 @@ function filterContent(category) {
             <img src="${item.img}" alt="${item.title}">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <button onclick="downloadApp()">Télécharger l'application</button>
+            <button onclick="downloadApp()">Suivre en Direct</button>
         `;
         categoryContent.appendChild(card);
     });
@@ -1312,18 +1334,6 @@ function addToWatchlist(item) {
 
 // Afficher une catégorie par défaut (par exemple, "Films")
 window.onload = () => filterContent('Films');
-// Gestion du formulaire d'abonnement à la newsletter
-document.getElementById('newsletter-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const email = this.querySelector('input').value;
-    Swal.fire({
-        title: 'Abonnement réussi',
-        text: `Merci de vous être abonné à notre newsletter, ${email}!`,
-        icon: 'success',
-        confirmButtonText: 'OK'
-    });
-    this.reset(); // Réinitialiser le formulaire
-});
 
 function downloadApp() {
     // Lien de téléchargement de l'application
@@ -1331,20 +1341,23 @@ function downloadApp() {
 
     // Affichage d'une confirmation avec SweetAlert2
     Swal.fire({
-        title: 'Téléchargez GRATUITEMENT',
-        text: 'Cliquez sur "Télécharger" pour obtenir notre application depuis le Google Play Store.',
-        icon: 'info',
-        confirmButtonText: 'Télécharger',
-        showCancelButton: true,
-        cancelButtonText: 'Annuler',
-        confirmButtonColor: '#ff6600',
-        cancelButtonColor: '#555'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Redirige vers le lien de téléchargement
-            window.open(appDownloadUrl, '_blank');
-        }
-    });
+    title: 'Regardez en Direct',
+    text: 'Cliquez sur "Télécharger" pour obtenir notre application sur Play Store.',
+    imageUrl: 'https://img.icons8.com/ios-filled/50/000000/tv.png', // Remplacez par l'URL de votre icône TV
+    imageWidth: 50, // Taille de l'image
+    imageHeight: 50,
+    confirmButtonText: 'Télécharger',
+    showCancelButton: true,
+    cancelButtonText: 'Annuler',
+    confirmButtonColor: '#ff6600',
+    cancelButtonColor: '#555'
+}).then((result) => {
+    if (result.isConfirmed) {
+        // Redirige vers le lien de téléchargement
+        window.open(appDownloadUrl, '_blank');
+    }
+});
+
 }
 function toggleChannels() {
     const hiddenChannels = document.querySelector('.hidden-channels');
