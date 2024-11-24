@@ -6,6 +6,11 @@
     <meta name="facebook-domain-verification" content="x637l68bjzcsq2hipfw0y7zoite1ht" />
     <title>AFRICA BOX TV</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Meta Pixel Code -->
 <script>
@@ -516,17 +521,157 @@ src="https://www.facebook.com/tr?id=461563253611528&ev=PageView&noscript=1"
     background: #0044cc;
 }
 
+/* Carousel Styling */
+header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.animated-text {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Breaking News Section */
+.breaking-news {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Assure que rien ne dépasse */
+}
+
+.breaking-news-title {
+    font-weight: bold;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.breaking-news-title i {
+    margin-right: 20px;
+}
+
+.breaking-content {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    height: 25px; /* Ajuster la hauteur si nécessaire */
+}
+
+.newsticker {
+    display: flex;
+    animation: scrollText 30s linear infinite;
+    white-space: nowrap;
+}
+
+.newsticker li {
+    list-style: none;
+    padding: 0 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.newsticker li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.newsticker li a:hover {
+    text-decoration: underline;
+}
+
+/* Animation de défilement */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 </style>
 <body>
-    <header class="header">
-        <h1>TV EN DIRECT</h1>
-        <div class="nav">
-            <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #cc5200; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
-                <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
-               Télécharge sur Play Store
-            </button>
-        </div>
-     
+        <header id="home" class="text-white text-center position-relative">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('images/cover6.jpeg');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                            <p>Plongez dans le Divertissement.</p>
+                            <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                                <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                               Disponible sur Play Store
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item active" style="background-image: url('images/cover0.jpg');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                            <p>Plongez dans le Divertissement.</p>
+                    <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                       Disponible sur Play Store
+                    </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('images/cover2.jpg');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                            <p>Plongez dans le Divertissement.</p>
+                            <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                                <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                               Disponible sur Play Store
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('images/cover4.jpg');">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                            <p>Plongez dans le Divertissement.</p>
+                            <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                                <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                               Disponible sur Play Store
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </header>
+        <section class="breaking-news breaking-news-style-1">     
+            <div class="breaking-content">
+                <ul class="newsticker">
+                    <li><a href="#">📺 Découvrez nos nouvelles chaînes premium disponibles dès aujourd'hui.</a></li>
+<li><a href="#">🎥 Regardez vos séries et films préférés en HD, où que vous soyez.</a></li>
+<li><a href="#">🌍 Accès exclusif : explorez des chaînes internationales en direct.</a></li>
+<li><a href="#">🔔 Abonnez-vous maintenant et profitez d'un mois gratuit sur nos chaînes premium.</a></li>
+<li><a href="#">📡 Nouvelle fonctionnalité : enregistrement en direct de vos émissions préférées.</a></li>
+<li><a href="#">📱 Téléchargez notre application MY TV et regardez vos programmes en déplacement.</a></li>
+<li><a href="#">💡 Astuce : activez les notifications pour ne manquer aucune émission importante.</a></li>
+<li><a href="#">💎 Offre limitée : passez à notre forfait VIP et débloquez du contenu exclusif.</a></li>
+
+                </ul>
+            </div>
+        </section>
+        
     </header>
     
 
@@ -534,7 +679,7 @@ src="https://www.facebook.com/tr?id=461563253611528&ev=PageView&noscript=1"
         <h2>TV EN DIRECT</h2>
         <div class="carousel">
             <div class="slide">
-                <center><img src="https://play-lh.googleusercontent.com/65Y7cwWNjL_N3bxjeWdRMyy_a2WbKRmbPclBpJWbZU_PFvN0x8ENYDcz4SNOFVS7aw=w416-h235-rw" alt="Promotion 1">
+                <center><img src="images/cover5.jpg" alt="Promotion 1">
                 <div class="slide-content">
                     <h3>PLUS DE 1500 CHAINES </h3>
                     <p>Plongez dans le Divertissement.</p>
@@ -542,8 +687,6 @@ src="https://www.facebook.com/tr?id=461563253611528&ev=PageView&noscript=1"
                         <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
                        Disponible sur Play Store
                     </button>
-                    
-                    
                 </div>
             </div>
             <div class="slide">
@@ -562,6 +705,17 @@ src="https://www.facebook.com/tr?id=461563253611528&ev=PageView&noscript=1"
                 <div class="slide-content">
                     <h3>SPORT EN DIRECT 24/7</h3>
                     <p>Regardez vos confrontations préférées en haute qualité.</p>
+                    <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                        <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
+                       Disponible sur Play Store
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <center><img src="images/dorcel africa.png" alt="Promotion 3">
+                <div class="slide-content">
+                    <h3>CHAINES ADULTES</h3>
+                    <center><img src="images/dorcel africa.png" alt="Promotion 3">
                     <button onclick="downloadApp()" style="display: flex; align-items: center; background-color: #130499; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
                         <img src="https://img.icons8.com/ios-filled/20/ffffff/google-play.png" alt="Play Store" style="margin-right: 10px; width: 16px; height: 16px;">
                        Disponible sur Play Store
@@ -1390,6 +1544,27 @@ function toggleChannels() {
         toggleButton.textContent = 'Tout Voir';
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Automatically scroll breaking news ticker
+    const ticker = document.querySelector('.newsticker');
+    const clone = ticker.innerHTML;
+    ticker.innerHTML += clone;
+
+    // Carousel Auto-Play (if needed)
+    const carousel = document.querySelector('#carouselExample');
+    const bsCarousel = new bootstrap.Carousel(carousel, {
+        interval: 5000, // Change slide every 5 seconds
+        pause: 'hover',
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ticker = document.querySelector('.newsticker');
+    if (ticker) {
+        const clone = ticker.innerHTML; // Clone du contenu pour un défilement continu
+        ticker.innerHTML += clone;
+    }
+});
 
     </script>
 </body>
